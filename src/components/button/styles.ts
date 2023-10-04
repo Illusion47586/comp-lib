@@ -11,7 +11,7 @@ const ButtonRecipe = cva({
     fontFamily: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: 700,
     border: 0,
-    borderRadius: ".8rem",
+    borderRadius: "8px",
     cursor: "pointer",
     lineHeight: 1,
     color: "white",
@@ -31,8 +31,9 @@ const ButtonRecipe = cva({
         backgroundColor: "purps.default",
       },
       secondary: {
+        color: "purps.default",
         backgroundColor: "transparent",
-        border: "1px solid purps.default",
+        border: "1px solid token(colors.purps.default)",
       },
     },
     size: {
