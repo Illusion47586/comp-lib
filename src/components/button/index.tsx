@@ -1,5 +1,7 @@
 import { PButton } from "./styles";
 
+import type { HTMLAttributes } from "react";
+
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -32,7 +34,7 @@ export const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: ButtonProps & HTMLAttributes<HTMLButtonElement>) => {
   return (
     <PButton
       type="button"
