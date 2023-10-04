@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { resolve } from "path";
-import { webpackStats } from "rollup-plugin-webpack-stats";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +12,6 @@ export default defineConfig({
       name: "comp-lib",
     },
     rollupOptions: {
-      plugins: [webpackStats()],
       external: ["react"],
       output: {
         globals: {
