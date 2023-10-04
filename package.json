@@ -53,6 +53,7 @@
     "eslint-plugin-storybook": "^0.6.13",
     "install": "^0.13.0",
     "pnpm": "^8.6.12",
+    "rollup-plugin-webpack-stats": "^0.2.1",
     "storybook": "^7.3.2",
     "storybook-addon-performance": "^0.17.1",
     "typescript": "^5.0.2",
