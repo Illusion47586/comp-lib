@@ -7,15 +7,18 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
+    minify: true,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "comp-lib",
     },
     rollupOptions: {
-      external: ["react"],
+      treeshake: true,
+      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "react",
+          "react-dom": "reactDom",
         },
       },
     },
