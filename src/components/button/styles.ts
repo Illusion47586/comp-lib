@@ -1,7 +1,6 @@
 import { cva } from "@styled/css";
-import { styled } from "@styled/jsx";
 
-const ButtonRecipe = cva({
+export const ButtonRecipe = cva({
   base: {
     display: "inline-flex",
     justifyContent: "center",
@@ -54,5 +53,3 @@ const ButtonRecipe = cva({
   },
   defaultVariants: { mode: "primary", size: "large" },
 });
-
-export const PButton = styled("button", ButtonRecipe);
