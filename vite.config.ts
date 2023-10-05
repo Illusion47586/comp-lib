@@ -12,6 +12,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "comp-lib",
+      fileName: "index",
       formats: ["es", "cjs"],
     },
     rollupOptions: {
@@ -24,7 +25,6 @@ export default defineConfig({
       treeshake: true,
       external: ["react", "react-dom"],
       output: {
-        exports: "named",
         globals: {
           react: "react",
           "react-dom": "reactDom",

@@ -6,14 +6,15 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/comp-lib.cjs",
-  "module": "./dist/comp-lib.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/comp-lib.js",
-      "require": "./dist/comp-lib.cjs"
-    }
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
