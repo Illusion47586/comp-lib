@@ -25,6 +25,7 @@
       "@styled/*": ["./styled-system/*"]
     }
   },
-  "include": ["src", "styled-system"],
+  "include": ["src", "styled-system", ".storybook"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
