@@ -1,4 +1,6 @@
-import { PButton } from "./styles";
+import { ButtonRecipe } from "./styles";
+
+import type { HTMLAttributes } from "react";
 
 interface ButtonProps {
   /**
@@ -32,16 +34,18 @@ export const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: ButtonProps & HTMLAttributes<HTMLButtonElement>) => {
   return (
-    <PButton
+    <button
       type="button"
-      mode={primary ? "primary" : "secondary"}
-      size={size}
+      className={ButtonRecipe({
+        mode: primary ? "primary" : "secondary",
+        size,
+      })}
       style={{ backgroundColor }}
       {...props}
     >
       {label}
-    </PButton>
+    </button>
   );
 };

@@ -1,25 +1,38 @@
 import { cva } from "@styled/css";
-import { styled } from "@styled/jsx";
 
-const ButtonRecipe = cva({
+export const ButtonRecipe = cva({
   base: {
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "8px",
+
     fontFamily: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: 700,
     border: 0,
-    borderRadius: "3rem",
+    borderRadius: "8px",
     cursor: "pointer",
-    display: "inline-block",
     lineHeight: 1,
     color: "white",
+    width: "100%",
+    transition: "all .3s",
+
+    "&:hover, &:focus": {
+      boxShadow: "0px 8px 15px 0px rgba(128, 0, 255, 0.30)",
+    },
+    "&:active": {
+      background: "purps.3",
+    },
   },
   variants: {
     mode: {
       primary: {
-        backgroundColor: "#646cff",
+        backgroundColor: "purps.default",
       },
       secondary: {
+        color: "purps.default",
         backgroundColor: "transparent",
-        border: "rgb(100, 108, 255) 1px solid",
+        border: "1px solid token(colors.purps.default)",
       },
     },
     size: {
@@ -32,12 +45,11 @@ const ButtonRecipe = cva({
         padding: "11px 20px",
       },
       large: {
-        fontSize: "16px",
-        padding: "12px 24px",
+        fontSize: "20px",
+        lineHeight: "24px",
+        padding: "13px 20px",
       },
     },
   },
-  defaultVariants: { mode: "primary", size: "medium" },
+  defaultVariants: { mode: "primary", size: "large" },
 });
-
-export const PButton = styled("button", ButtonRecipe);
